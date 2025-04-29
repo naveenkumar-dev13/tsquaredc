@@ -12,7 +12,10 @@
 
 .links {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+  background-color: black;
+  padding: 10px 1rem;
+  border-radius: 100px;
 }
 .nav-links {
   text-decoration: none;

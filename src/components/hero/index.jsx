@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
-import { hero1 } from "../../assets/images";
-import Button from "../button";
+import { hero1, hero2, hero3, hero4 } from "../../assets/images";
+import { COMPANY_LOGOS } from "../../data";
 
 function Hero() {
   return (
@@ -9,7 +9,7 @@ function Hero() {
       <div className="hero">
         <div className="hero_left">
           <h1 className="heading">
-            The Future of Tech <span>Starts Here</span>
+            The Future of Tech <span className="gradient">Starts Here</span>
           </h1>
           <p className="hero_para">
             From concept to market, TSquaredC supercharges your tech journey
@@ -17,14 +17,24 @@ function Hero() {
             build groundbreaking solutions that define tomorrow.
           </p>
           <a href="#contact">
-            {" "}
             <button className="btn">
               Let's Build Something Extraordinary{" "}
             </button>
           </a>
+          <div className="company">
+            <p>TRUSTED BY THE BEST</p>
+            <div className="company_logo">
+              {COMPANY_LOGOS.map((logos, index) => (
+                <img src={logos.src} alt={logos.alt} className="logos" />
+              ))}
+            </div>
+          </div>
         </div>
-        <div>
-          <img src={hero1} alt="hero_img" />
+        <div className="hero_right">
+          <img src={hero3} alt="hero_img" className="hero_img" />
+          <img src={hero1} alt="hero_img" className="hero_img" />
+          <img src={hero2} alt="hero_img" className="hero_img" />
+          <img src={hero4} alt="hero_img" className="hero_img" />
         </div>
       </div>
     </div>
